@@ -2,9 +2,15 @@ package bowling.model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 class FrameStatusTest {
 
-	//TODO: 첫번째 공에 10핀을 쓰러뜨리면 STRIKE 이다.
+	@Test
+	void 첫번째_공에_10핀을_쓰러뜨리면_STRIKE(){
+		Assertions.assertThat(FrameStatus.valueOf(10)).isEqualTo(FrameStatus.STRIKE);
+	}
 
 	//TODO : 두번째 공에 10핀을 쓰러트리면 SPARE 이다.
 
