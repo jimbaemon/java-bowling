@@ -13,4 +13,12 @@ public enum FrameStatus {
         }
         return NOT_AT_ALL;
     }
+
+    public static FrameStatus secondShot(int firstShot, int secondShot) {
+        //TODO: 첫번째 값이 10이면 오류 발생
+        if (firstShot + secondShot == 10) {
+            return SPARE;
+        }
+        return GUTTER;
+    }
 }
