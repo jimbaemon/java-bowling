@@ -21,6 +21,9 @@ class FrameStatusTest {
         assertThat(FrameStatus.secondShot(5, 3)).isEqualTo(FrameStatus.MISS);
     }
 
-    //TODO : 마지막 공에도 0핀을 쓰러뜨리면 GUTTER 이다.
+    @Test
+    void 마지막_공에도_0핀을_쓰러뜨리면_GUTTER() {
+        assertThat(FrameStatus.secondShot(0, 0)).isEqualTo(FrameStatus.GUTTER);
+    }
 
 }
