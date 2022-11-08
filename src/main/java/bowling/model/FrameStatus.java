@@ -19,6 +19,9 @@ public enum FrameStatus {
         if (firstShot + secondShot == 10) {
             return SPARE;
         }
+        if (firstShot + secondShot < 10 && firstShot + secondShot > 0) {
+            return MISS;
+        }
         return GUTTER;
     }
 }
