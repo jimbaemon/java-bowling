@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Test;
 
 class FrameStatusTest {
 
+    //TODO: 잘못된 값이 들어가면 에러처리 EX) 10이상 0이하
+
+    //TODO: 매개변수 하나로 통합.
+
+
     @Test
     void 첫번째_공에_10핀을_쓰러뜨리면_STRIKE() {
         assertThat(FrameStatus.firstShot(10)).isEqualTo(FrameStatus.STRIKE);
