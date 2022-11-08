@@ -17,4 +17,10 @@ public class Frame {
     public FrameStatus result() {
         return FrameStatus.firstShot(scores.get(0));
     }
+
+    public void addScore(int score) {
+        if (result() == FrameStatus.STRIKE) {
+            throw new IllegalStateException("스트라이크 상태에서 점수를 추가 할 수 없습니다.");
+        }
+    }
 }
