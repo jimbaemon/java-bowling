@@ -8,9 +8,16 @@ import org.junit.jupiter.api.Test;
 class FrameTest {
 
     @Test
-    void 투구_결과_확인() {
+    void 투구_결과_스트라이크_확인() {
         Frame frame = new Frame(10);
         assertThat(frame.result()).isEqualTo(FrameStatus.STRIKE);
+    }
+
+    @Test
+    void 투구_결과_이외_확인() {
+        Frame frame = new Frame(8);
+        frame.addScore(2);
+        assertThat(frame.result()).isEqualTo(FrameStatus.SPARE);
     }
 
     @Test
